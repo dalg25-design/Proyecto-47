@@ -34,25 +34,27 @@ btnStart.style.display = "none";
 
 const mensajes = [
 
-"Inicializando protocolo...",
+"Inicializando protocolo del Proyecto Operación 47...",
 
-"Conectando con servidor seguro...",
+"Comprobando integridad del sistema...",
 
-"Verificando credenciales...",
+"Estableciendo conexión cifrada...",
 
-"Accediendo a base de datos...",
+"Descargando credenciales...",
 
-"Buscando agente especializado...",
+"Verificando identidad del agente...",
 
 "",
 
-"Coincidencia encontrada.",
+"✔ Identidad confirmada.",
 
 "",
 
 ">>> AGENTE DONDI",
 
-">>> NIVEL 47",
+">>> NIVEL DE ACCESO 47",
+
+">>> CLASIFICACIÓN ALTO SECRETO",
 
 "",
 
@@ -96,10 +98,9 @@ function escribirLinea() {
 
     const intervalo = setInterval(()=>{
 
-        p.textContent = texto.substring(0,letra);
-
+        p.innerHTML = texto.substring(0,letra) + "<span class='cursor'>█</span>";
         letra++;
-
+p.innerHTML = texto;
         if(letra > texto.length){
 
             clearInterval(intervalo);
